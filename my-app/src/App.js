@@ -17,7 +17,7 @@ function EmailForm() {
       <p>Hello,</p>
 
       <p>
-        You have a Zoom appointment with <span style="color: #00457D; font-weight: bold;">NP Lynne Tavera</span> today <span style="color: #00457D; font-weight: bold;">${date}</span> at <span style="color: #00457D; font-weight: bold;">${time} am. </span>
+        You have a Zoom appointment with <span style="color: #00457D; font-weight: bold;">NP Lynne Tavera</span> today <span style="color: #00457D; font-weight: bold;">(${date})</span> at <span style="color: #00457D; font-weight: bold;">${time} am. </span>
       </p>
 
       <p>
@@ -31,6 +31,17 @@ function EmailForm() {
         appointment. If you are in a location where you are easily distracted or where noise prevents communication, 
         you will be asked to reschedule your appointment.</span>
       </p>
+
+      <p>
+        Thank you <br><br>
+        Join Zoom Meeting
+      </p>
+
+      <p>
+      <iframe src="https://us06web.zoom.us/j/4976423654" width="800" height="600" frameborder="0"></iframe>
+
+      </p>
+
     </div>`
       
 
