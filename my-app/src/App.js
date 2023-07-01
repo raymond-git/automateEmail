@@ -17,11 +17,11 @@ function EmailForm() {
       <p>Hello,</p>
 
       <p>
-        You have a Zoom appointment with <span style="color: #1657A3; font-weight: bold;">NP Lynne Tavera</span> today <span style="color: #1657A3; font-weight: bold;">${date}</span> at <span style="color: #1657A3; font-weight: bold;">${time} am. </span>
+        You have a Zoom appointment with <span style="color: #00457D; font-weight: bold;">NP Lynne Tavera</span> today <span style="color: #00457D; font-weight: bold;">${date}</span> at <span style="color: #00457D; font-weight: bold;">${time} am. </span>
       </p>
 
       <p>
-        Please click the link below at 11:45 am (Please DO NOT click until your appointment time) 
+        Please click the link below at <span style="color: #00457D; font-weight: bold;">${date}</span> am (Please DO NOT click until your appointment time) 
         and Lynne will connect with you within 45 minutes of your appointment time. Please have your 
         medications ready to review with the provider.
       </p>
