@@ -15,45 +15,93 @@ function EmailForm() {
     if (provider === 'Lynne' || provider === 'lynne') {
       const formattedDate = date ? formatDate(date) : '';
       const newText = `
-      <div class="border border-black p-4">
-        <div style="font-size: 19px; font-family: Cambria;">
-          <p>Hello,</p><br>
+        <div class="border border-black p-4">
+          <div style="font-size: 19px; font-family: Cambria;">
+            <p>Hello,</p><br>
 
-          <p>
-            You have a Zoom appointment with <span style="color: #00457D; font-weight: bold;">NP Lynne Tavera</span> today <span style="color: #00457D; font-weight: bold;">(${formattedDate})</span> at <span style="color: #00457D; font-weight: bold;">${time}. </span>
-          </p><br>
+            <p>
+              You have a Zoom appointment with <span style="color: #00457D; font-weight: bold;">NP Lynne Tavera</span> today <span style="color: #00457D; font-weight: bold;">(${formattedDate})</span> at <span style="color: #00457D; font-weight: bold;">${time}. </span>
+            </p><br>
 
-          <p>
-            Please click the link below at <span style="color: #00457D; font-weight: bold;">${time}</span> (Please DO NOT click until your appointment time) 
-            and Lynne will connect with you within 45 minutes of your appointment time. Please have your 
-            medications ready to review with the provider.
-          </p><br>
+            <p>
+              Please click the link below at <span style="color: #00457D; font-weight: bold;">${time}</span> (Please DO NOT click until your appointment time)
+              and Lynne will connect with you within 45 minutes of your appointment time. Please have your
+              medications ready to review with the provider.
+            </p><br>
 
-          <p>
-            <span style="background-color: #D3D3D3;">It is important that you are in a location where you can apply your full attention to your telehealth 
-            appointment. If you are in a location where you are easily distracted or where noise prevents communication, 
-            you will be asked to reschedule your appointment.</span>
-          </p><br>
+            <p>
+              <span style="background-color: #D3D3D3;">It is important that you are in a location where you can apply your full attention to your telehealth
+              appointment. If you are in a location where you are easily distracted or where noise prevents communication,
+              you will be asked to reschedule your appointment.</span>
+            </p><br>
 
-          <div style="font-size: 21px; font-family: Cambria;">
-            <p> 
+            <div style="font-size: 21px; font-family: Cambria;">
+              <p>
               Thank you <br><br>
               Join Zoom Meeting<br><br>
             </p>
-     
+
             <p>
               <u><span style="color: #00457D;">https://us06web.zoom.us/j/4976423654</span></u><br><br>
+              </p>
+            </div>
+
+            <p>
+              <span style="background-color: #00FFFF; color: #003D99; font-family:blessed-facit-regular; font-size: 22px;">Meeting ID: 497 642 3654</span>
             </p>
           </div>
-
-          <p>
-            <span style="background-color: #00FFFF; color: #003D99; font-family:blessed-facit-regular; font-size: 22px;">Meeting ID: 497 642 3654</span>
-          </p>
-        </div>
-      </div>
- 
+       </div>
 `
       setEmailContent((prevText) => prevText + '<br/>' + newText);
+    } else if(provider === "Stollman"){
+      const formattedDate = date ? formatDate(date) : '';
+      const newText2 = `
+        <div class="border border-black p-4">
+          <div style="font-size: 19px; font-family: Arial;">
+            <p>Hi,</p><br>
+
+            <p>
+              You have a Zoom appointment with Dr. Stollman today at <span style= "font-weight: bold;">${time} (${formattedDate}).</span>
+            </p><br>
+
+            <p>
+              Please click the link below <span style="font-weight: bold;">5 minutes before your appointment time</span> and Dr. Stollman will connect with you <span style="font-weight: bold; color: #0078D4; font-size: 20px;">within 30 minutes</span>
+              of your appointment time.
+            </p><br>
+
+            <p>
+              <span style="background-color: yellow;">It is important that you are in a location where you can apply your full attention to your telehealth
+              appointment. If you are in a location where you are easily distracted or where noise prevents communication,
+              you will be asked to reschedule your appointment. Thank you</span>
+            </p><br>
+
+            <p style="font-size: 19px; font-family: Calibri;">
+              <b>1)</b> IF YOU HAVE NOT FILLED OUT REGISTRATION FORMS THIS YEAR, <br> 
+              PLEASE FILL OUT THE FORM ON OUR WEBSITE: <br>
+              <u><span style="font-size: 14px; font-family: Arial; color: blue">https://www.eastbaygi.com/patient-forms/</span></u>
+            </p><br>
+
+            <p style="font-size: 19px; font-family: Calibri;">
+              <b>2) </b>PLEASE HAVE YOUR <span style="background-color: yellow"><b>MEDICATIONS, HEIGHT and WEIGHT</b></span> READY FOR YOUR APPOINTMENT
+            </p>
+          </div><br>
+
+          <div style="font-size: 21px; font-family: Cambria;">
+            <p>
+              <b>Join Zoom Meeting<br><br></b>
+            </p>
+
+            <p>
+              <u><span style="font-size: 14px; font-family: Arial; color: blue">https://zoom.us/j/5789974003</span> </u>
+            </p>
+          </div><br>
+
+          <p>
+           <span style="font-size: 18px; font-family: Calibri";> Meeting ID: <span style="font-size: 20px"><b>578 997 4003</b></span></span>
+          </p>  
+        </div>
+`
+      setEmailContent((prevText) => prevText + '<br/>' + newText2);
     } else {
       setEmailContent('');
     }
@@ -93,7 +141,6 @@ function EmailForm() {
               onChange={(selectedDate) => setDate(selectedDate)}
               dateFormat="MM/dd/yyyy"
               className="border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:border-blue-500"
-
             />
           </div>
           <div>
@@ -139,7 +186,6 @@ function EmailForm() {
           </div>
           <div>
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>
-
           </div>
         </div>
         <div
