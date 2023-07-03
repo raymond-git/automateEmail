@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-
 function EmailForm() {
   const [provider, setProvider] = useState('');
   const [date, setDate] = useState('');
@@ -12,7 +11,7 @@ function EmailForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (provider === 'Lynne' || provider === 'lynne') {
+    if (provider === 'Lynne') {
       const formattedDate = date ? formatDate(date) : '';
       const newText = `
         <div class="border border-black p-4">
@@ -42,7 +41,7 @@ function EmailForm() {
             </p>
 
             <p>
-              <u><span style="color: #00457D;">https://us06web.zoom.us/j/4976423654</span></u><br><br>
+              <u><a href="https://us06web.zoom.us/j/4976423654"><span style="color: #00457D;">https://us06web.zoom.us/j/4976423654</span></a></u><br><br>
               </p>
             </div>
 
@@ -53,7 +52,7 @@ function EmailForm() {
        </div>
 `
       setEmailContent((prevText) => prevText + '<br/>' + newText);
-    } else if(provider === "Stollman"){
+    } else if (provider === "Stollman") {
       const formattedDate = date ? formatDate(date) : '';
       const newText2 = `
         <div class="border border-black p-4">
@@ -78,7 +77,8 @@ function EmailForm() {
             <p style="font-size: 19px; font-family: Calibri;">
               <b>1)</b> IF YOU HAVE NOT FILLED OUT REGISTRATION FORMS THIS YEAR, <br> 
               PLEASE FILL OUT THE FORM ON OUR WEBSITE: <br>
-              <u><span style="font-size: 14px; font-family: Arial; color: blue">https://www.eastbaygi.com/patient-forms/</span></u>
+              <u><a href="https://www.eastbaygi.com/patient-forms/"><span style="display: block; font-size: 14px; font-family: Arial; color: blue">https://www.eastbaygi.com/patient-forms/</span></a></u>
+
             </p><br>
 
             <p style="font-size: 19px; font-family: Calibri;">
@@ -92,7 +92,7 @@ function EmailForm() {
             </p>
 
             <p>
-              <u><span style="font-size: 14px; font-family: Arial; color: blue">https://zoom.us/j/5789974003</span> </u>
+              <u><a href="https://zoom.us/j/5789974003"><span style="font-size: 14px; font-family: Arial; color: blue">https://zoom.us/j/5789974003</span></a></u>
             </p>
           </div><br>
 
@@ -102,6 +102,106 @@ function EmailForm() {
         </div>
 `
       setEmailContent((prevText) => prevText + '<br/>' + newText2);
+    } else if (provider === "Luba") {
+      const formattedDate = date ? formatDate(date) : '';
+      const newText3 = `
+        <div class="border border-black p-4">
+          <div style="font-size: 19px; font-family: Arial;">
+            <p>Hi,</p><br>
+
+            <p>
+              You have a Zoom appointment Luba Teytelman, PA today at <span style="font-size: 24px"><b>${time}</b> <b>(${formattedDate}).</b></span>
+            </p><br>
+
+            <p>
+                <span style="font-size: 24px"><b>Please click the link below 5 minutes before your appointment time</b></span> and Luba will connect with you <span style="color: #0078D4;"><b>within 30 minutes</b></span> of your appointment time.
+            </p><br>
+
+            <p>
+              <b>Join Zoom Meeting</b>
+            </p><br>
+
+            <p>
+              <u><a href="https://zoom.us/j/9345532744"><span style="font-size: 14px; font-family: Arial; color: blue">https://zoom.us/j/9345532744</span></a></u>
+            </p>
+
+            <p>
+            <div style="font-family: Calibri">
+              <span style="font-size: 16px">Meeting ID:</span> <span style="font-size: 20px"><b>934 553 2744</b></span>
+              </div>
+            </p>
+          </div><br><br>
+
+          <p>
+            <div style="font-size: 20px; font-family: Arial">
+              <b>
+                It is important that you are in a location where you can apply your full attention to your telehealth appointment. If you are in a location 
+                where you are easily distracted or where noise prevents communication, you will be asked to reschedule your appointment. Thank you.
+              </b>
+            </div>
+          </p><br>
+
+          <p style="font-size: 19px; font-family: Calibri;">
+            <b>1)</b> IF YOU HAVE NOT FILLED OUT REGISTRATION FORMS THIS YEAR, <br> 
+            PLEASE FILL OUT THE FORM ON OUR WEBSITE:<br>
+            <u><a href="https://www.eastbaygi.com/patient-forms/"><span style="display: block; font-size: 14px; font-family: Arial; color: blue">https://www.eastbaygi.com/patient-forms/</span></a></u>
+          </p><br>
+
+          <p style="font-size: 19px; font-family: Calibri;">
+            <b>2) </b>PLEASE HAVE YOUR <span style="font-size: 20px;"><b>MEDICATIONS, HEIGHT and WEIGHT</b></span> READY FOR YOUR APPOINTMENT
+          </p>
+       </div>
+      `
+      setEmailContent((prevText) => prevText + '<br/>' + newText3);
+    } else if (provider === "Danny") {
+      const formattedDate = date ? formatDate(date) : '';
+      const newText4 = `
+      <div class="border border-black p-4">
+          <div style="font-size: 19px; font-family: Arial;">
+            <p>Hi,</p><br>
+
+            <p>
+              You have a Zoom appointment with Dr. Danny Wu today at <span style= "font-weight: bold;">${time} (${formattedDate}).</span>
+            </p><br>
+
+            <p>
+              Please click the link below <span style="font-weight: bold;">5 minutes before your appointment time</span> and Dr. Danny Wu will connect with you <span style="font-weight: bold; color: #0078D4; font-size: 20px;">within 30 minutes</span>
+              of your appointment time.
+            </p><br>
+
+            <p>
+              <span style="background-color: yellow;">It is important that you are in a location where you can apply your full attention to your telehealth
+              appointment. If you are in a location where you are easily distracted or where noise prevents communication,
+              you will be asked to reschedule your appointment. Thank you</span>
+            </p><br>
+
+            <p style="font-size: 19px; font-family: Calibri;">
+              <b>1)</b> IF YOU HAVE NOT FILLED OUT REGISTRATION FORMS THIS YEAR, <br> 
+              PLEASE FILL OUT THE FORM ON OUR WEBSITE: <br>
+              <u><a href="https://www.eastbaygi.com/patient-forms/"><span style="display: block; font-size: 14px; font-family: Arial; color: blue">https://www.eastbaygi.com/patient-forms/</span></a></u>
+
+            </p><br>
+
+            <p style="font-size: 19px; font-family: Calibri;">
+              <b>2) </b>PLEASE HAVE YOUR <span style="background-color: yellow"><b>MEDICATIONS, HEIGHT and WEIGHT</b></span> READY FOR YOUR APPOINTMENT
+            </p>
+          </div><br>
+
+          <div style="font-size: 21px; font-family: Cambria;">
+            <p>
+              <b>Join Zoom Meeting<br><br></b>
+            </p>
+
+            <p>
+              <u><a href="https://us04web.zoom.us/j/7815580691?pwd=M1ljaElvb3VYaGtzSjB4UjJLTU55Zz09"><span style="font-size: 14px; font-family: Arial; color: blue">https://us04web.zoom.us/j/7815580691?pwd=M1ljaElvb3VYaGtzSjB4UjJLTU55Zz09</span></a></u>
+            </p>
+          </div><br>
+
+          <p>
+           <span style="font-size: 18px; font-family: Calibri";> Meeting ID: <span style="font-size: 20px"><b>781 558 0691</b></span></span>
+          </p>  
+        </div>`
+      setEmailContent((prevText) => prevText + '<br/>' + newText4);
     } else {
       setEmailContent('');
     }
@@ -124,13 +224,14 @@ function EmailForm() {
               value={provider}
               onChange={(e) => setProvider(e.target.value)}
               className="border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:border-blue-500">
-
               <option value="">Select a Provider</option>
               <option value="Lynne">Lynne</option>
               <option value="Stollman">Stollman</option>
-              <option value="Danny">Danny</option>
               <option value="Luba">Luba</option>
+              <option value="Danny">Danny</option>
               <option value="Villagomez">Villagomez</option>
+              <option value="Lauren">Lauren</option>
+              <option value="Lauren">Jenna</option>
             </select>
           </div>
           <div>
