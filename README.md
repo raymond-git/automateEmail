@@ -1,1 +1,5 @@
-#automateEmail
+Problems:
+While working in the medical field as a medical assistant, I frequently heard my colleagues expressing frustration about the time-consuming task of manually copying and pasting zoom body paragraphs from one email to another. They found it cumbersome to go through each email individually, copying the provider's content and pasting it into a new email. 
+
+Solutions:
+Leveraging my computer science background, I had a brilliant idea to alleviate the tedious task my medical assistant colleagues faced. I embarked on the journey of developing a program that could streamline their workflow by automating the process of copying and pasting zoom body paragraphs. With the implementation of my program, my colleagues no longer have to waste time manually deleting the date and time, which was a laborious process. This improvement has significantly increased efficiency, streamlining their workflow to a great extent. I take great pride in the fact that I am able to contribute to making my colleagues' lives easier while simultaneously enhancing the overall efficiency of the company since this is a fast pace job
